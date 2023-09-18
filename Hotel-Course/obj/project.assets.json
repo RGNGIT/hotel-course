@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\repos\\Hotel-Course\\Hotel-Course\\Hotel-Course.csproj",
+      "projectUniqueName": "D:\\hotel-course\\Hotel-Course\\Hotel-Course.csproj",
       "projectName": "Hotel-Course",
-      "projectPath": "D:\\source\\repos\\Hotel-Course\\Hotel-Course\\Hotel-Course.csproj",
+      "projectPath": "D:\\hotel-course\\Hotel-Course\\Hotel-Course.csproj",
       "packagesPath": "C:\\Users\\vnife\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\repos\\Hotel-Course\\Hotel-Course\\obj\\",
+      "outputPath": "D:\\hotel-course\\Hotel-Course\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vnife\\AppData\\Roaming\\NuGet\\NuGet.Config",

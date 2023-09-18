@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/tyDnCtN1+smDqcL96rszHRTj1Q06szJ700pwZWhTQ5NdMp972ex3FAHPgR86Se6nDC028iIQTyHf/K+n5Td+Q==",
+  "dgSpecHash": "zIy7cEirDyh3w8krKUO5e6fnHp/RnHfcroDRax7IKMZjmab2yQFegZkX+8UjdcdT7L7MLNVhWaZy2PvDD52eDg==",
   "success": true,
-  "projectFilePath": "D:\\source\\repos\\Hotel-Course\\Hotel-Course\\Hotel-Course.csproj",
+  "projectFilePath": "D:\\hotel-course\\Hotel-Course\\Hotel-Course.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

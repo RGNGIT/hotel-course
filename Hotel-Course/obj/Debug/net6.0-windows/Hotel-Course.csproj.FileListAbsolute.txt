@@ -1,0 +1,17 @@
+D:\hotel-course\Hotel-Course\bin\Debug\net6.0-windows\Hotel-Course.exe
+D:\hotel-course\Hotel-Course\bin\Debug\net6.0-windows\Hotel-Course.deps.json
+D:\hotel-course\Hotel-Course\bin\Debug\net6.0-windows\Hotel-Course.runtimeconfig.json
+D:\hotel-course\Hotel-Course\bin\Debug\net6.0-windows\Hotel-Course.dll
+D:\hotel-course\Hotel-Course\bin\Debug\net6.0-windows\Hotel-Course.pdb
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.csproj.AssemblyReference.cache
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel_Course.App.resources
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.csproj.GenerateResource.cache
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.GeneratedMSBuildEditorConfig.editorconfig
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.AssemblyInfoInputs.cache
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.AssemblyInfo.cs
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.csproj.CoreCompileInputs.cache
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.dll
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\refint\Hotel-Course.dll
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.pdb
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\Hotel-Course.genruntimeconfig.cache
+D:\hotel-course\Hotel-Course\obj\Debug\net6.0-windows\ref\Hotel-Course.dll
