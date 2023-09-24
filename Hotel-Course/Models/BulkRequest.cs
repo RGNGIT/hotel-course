@@ -9,6 +9,7 @@ namespace Hotel_Course.Models
     public class BulkRequest : Request
     {
         public List<Number> Numbers { get; set; }
+        public List<int>? DiscountMap { get; set; }
 
         public BulkRequest(string Id, string Holder, List<Number> numbers, DateTime dateFrom, DateTime dateTo) 
         {

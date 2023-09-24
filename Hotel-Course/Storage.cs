@@ -43,5 +43,6 @@ namespace Hotel_Course
         };
 
         public static List<Models.Request> Requests { get; set; } = new List<Models.Request>();
+        public static List<Models.Request> ClosedRequests { get; set; } = new List<Models.Request>(); 
     }
 }

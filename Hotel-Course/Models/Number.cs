@@ -11,5 +11,6 @@ namespace Hotel_Course.Models
         public string? Id { get; set; }
         public string? Description { get; set; }
         public float Cost { get; set; }
+        public bool Taken { get; set; } = false;
     }
 }

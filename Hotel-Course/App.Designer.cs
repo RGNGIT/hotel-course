@@ -30,6 +30,8 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            label6 = new Label();
+            comboBoxRoomTypeRequired = new ComboBox();
             buttonAddRequest = new Button();
             tabControl2 = new TabControl();
             tabPage3 = new TabPage();
@@ -38,40 +40,70 @@
             comboBoxInstantNumber = new ComboBox();
             tabPage4 = new TabPage();
             dataGridViewNumbers = new DataGridView();
+            Column9 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            Column10 = new DataGridViewTextBoxColumn();
             textBoxRequestHolder = new TextBox();
             dateTimePickerRequestFrom = new DateTimePicker();
             dateTimePickerRequestTo = new DateTimePicker();
             label4 = new Label();
             label2 = new Label();
             label3 = new Label();
+            tabPage5 = new TabPage();
+            dataGridViewRegisteredRequests = new DataGridView();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            Column8 = new DataGridViewTextBoxColumn();
+            Column11 = new DataGridViewTextBoxColumn();
+            tabPage7 = new TabPage();
+            dataGridViewClosedRequests = new DataGridView();
+            tabPage6 = new TabPage();
+            labelStats = new Label();
             tabPage2 = new TabPage();
             buttonAddDay = new Button();
             label1 = new Label();
             dateTimePickerCurrentDate = new DateTimePicker();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            Column12 = new DataGridViewTextBoxColumn();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabControl2.SuspendLayout();
             tabPage3.SuspendLayout();
             tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewNumbers).BeginInit();
+            tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRegisteredRequests).BeginInit();
+            tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClosedRequests).BeginInit();
+            tabPage6.SuspendLayout();
             tabPage2.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage5);
+            tabControl1.Controls.Add(tabPage7);
+            tabControl1.Controls.Add(tabPage6);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Location = new Point(2, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
             tabControl1.Size = new Size(797, 446);
             tabControl1.TabIndex = 0;
+            tabControl1.SelectedIndexChanged += tabControl1_SelectedIndexChanged;
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(label6);
+            tabPage1.Controls.Add(comboBoxRoomTypeRequired);
             tabPage1.Controls.Add(buttonAddRequest);
             tabPage1.Controls.Add(tabControl2);
             tabPage1.Controls.Add(textBoxRequestHolder);
@@ -87,6 +119,26 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Заявка";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(6, 141);
+            label6.Name = "label6";
+            label6.Size = new Size(113, 15);
+            label6.TabIndex = 11;
+            label6.Text = "Желаемая комната";
+            // 
+            // comboBoxRoomTypeRequired
+            // 
+            comboBoxRoomTypeRequired.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxRoomTypeRequired.FormattingEnabled = true;
+            comboBoxRoomTypeRequired.Items.AddRange(new object[] { "Люкс", "Полулюкс", "Однокомнатный", "Двукомнатный", "Двукомнатный с диванами" });
+            comboBoxRoomTypeRequired.Location = new Point(6, 159);
+            comboBoxRoomTypeRequired.Name = "comboBoxRoomTypeRequired";
+            comboBoxRoomTypeRequired.Size = new Size(200, 23);
+            comboBoxRoomTypeRequired.TabIndex = 10;
+            comboBoxRoomTypeRequired.SelectedValueChanged += comboBoxRoomTypeRequired_SelectedValueChanged;
             // 
             // buttonAddRequest
             // 
@@ -146,7 +198,6 @@
             comboBoxInstantNumber.Name = "comboBoxInstantNumber";
             comboBoxInstantNumber.Size = new Size(554, 23);
             comboBoxInstantNumber.TabIndex = 6;
-            comboBoxInstantNumber.SelectedValueChanged += comboBox1_SelectedValueChanged;
             // 
             // tabPage4
             // 
@@ -162,12 +213,17 @@
             // dataGridViewNumbers
             // 
             dataGridViewNumbers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewNumbers.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3 });
+            dataGridViewNumbers.Columns.AddRange(new DataGridViewColumn[] { Column9, Column1, Column2, Column3, Column10 });
             dataGridViewNumbers.Location = new Point(6, 6);
             dataGridViewNumbers.Name = "dataGridViewNumbers";
             dataGridViewNumbers.RowTemplate.Height = 25;
             dataGridViewNumbers.Size = new Size(554, 369);
             dataGridViewNumbers.TabIndex = 0;
+            // 
+            // Column9
+            // 
+            Column9.HeaderText = "Index";
+            Column9.Name = "Column9";
             // 
             // Column1
             // 
@@ -183,6 +239,11 @@
             // 
             Column3.HeaderText = "Доп. инфо.";
             Column3.Name = "Column3";
+            // 
+            // Column10
+            // 
+            Column10.HeaderText = "Скидка";
+            Column10.Name = "Column10";
             // 
             // textBoxRequestHolder
             // 
@@ -232,6 +293,97 @@
             label3.TabIndex = 4;
             label3.Text = "Дата заезда";
             // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(dataGridViewRegisteredRequests);
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Padding = new Padding(3);
+            tabPage5.Size = new Size(789, 418);
+            tabPage5.TabIndex = 2;
+            tabPage5.Text = "Зарегистрированные заявки";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewRegisteredRequests
+            // 
+            dataGridViewRegisteredRequests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewRegisteredRequests.Columns.AddRange(new DataGridViewColumn[] { Column4, Column5, Column6, Column7, Column8, Column11 });
+            dataGridViewRegisteredRequests.Location = new Point(6, 6);
+            dataGridViewRegisteredRequests.Name = "dataGridViewRegisteredRequests";
+            dataGridViewRegisteredRequests.RowTemplate.Height = 25;
+            dataGridViewRegisteredRequests.Size = new Size(776, 406);
+            dataGridViewRegisteredRequests.TabIndex = 0;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Id";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Держатель";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Дата заезда";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Дата выезда";
+            Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Детали";
+            Column8.Name = "Column8";
+            // 
+            // Column11
+            // 
+            Column11.HeaderText = "Скидка";
+            Column11.Name = "Column11";
+            // 
+            // tabPage7
+            // 
+            tabPage7.Controls.Add(dataGridViewClosedRequests);
+            tabPage7.Location = new Point(4, 24);
+            tabPage7.Name = "tabPage7";
+            tabPage7.Size = new Size(789, 418);
+            tabPage7.TabIndex = 4;
+            tabPage7.Text = "Закрытые заявки";
+            tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewClosedRequests
+            // 
+            dataGridViewClosedRequests.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewClosedRequests.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, Column12 });
+            dataGridViewClosedRequests.Location = new Point(6, 6);
+            dataGridViewClosedRequests.Name = "dataGridViewClosedRequests";
+            dataGridViewClosedRequests.RowTemplate.Height = 25;
+            dataGridViewClosedRequests.Size = new Size(776, 406);
+            dataGridViewClosedRequests.TabIndex = 1;
+            // 
+            // tabPage6
+            // 
+            tabPage6.Controls.Add(labelStats);
+            tabPage6.Location = new Point(4, 24);
+            tabPage6.Name = "tabPage6";
+            tabPage6.Padding = new Padding(3);
+            tabPage6.Size = new Size(789, 418);
+            tabPage6.TabIndex = 3;
+            tabPage6.Text = "Статистика";
+            tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // labelStats
+            // 
+            labelStats.AutoSize = true;
+            labelStats.Location = new Point(3, 3);
+            labelStats.Name = "labelStats";
+            labelStats.Size = new Size(38, 15);
+            labelStats.TabIndex = 0;
+            labelStats.Text = "label7";
+            // 
             // tabPage2
             // 
             tabPage2.Controls.Add(buttonAddDay);
@@ -271,14 +423,40 @@
             dateTimePickerCurrentDate.Size = new Size(162, 23);
             dateTimePickerCurrentDate.TabIndex = 0;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "Id";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "Держатель";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "Дата заезда";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "Дата выезда";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // Column12
+            // 
+            Column12.HeaderText = "Стоимость";
+            Column12.Name = "Column12";
+            // 
             // App
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(tabControl1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "App";
-            Text = "Form1";
+            Text = "App";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
@@ -287,6 +465,12 @@
             tabPage3.PerformLayout();
             tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewNumbers).EndInit();
+            tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewRegisteredRequests).EndInit();
+            tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClosedRequests).EndInit();
+            tabPage6.ResumeLayout(false);
+            tabPage6.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ResumeLayout(false);
@@ -314,8 +498,29 @@
         private Label labelDescriptionInstant;
         private Button buttonAddRequest;
         private DataGridView dataGridViewNumbers;
+        private TabPage tabPage5;
+        private DataGridView dataGridViewRegisteredRequests;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
+        private DataGridViewTextBoxColumn Column7;
+        private DataGridViewTextBoxColumn Column8;
+        private Label label6;
+        private ComboBox comboBoxRoomTypeRequired;
+        private DataGridViewTextBoxColumn Column9;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column10;
+        private DataGridViewTextBoxColumn Column11;
+        private TabPage tabPage6;
+        private Label labelStats;
+        private TabPage tabPage7;
+        private DataGridView dataGridViewClosedRequests;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn Column12;
     }
 }

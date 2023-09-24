@@ -9,6 +9,7 @@ namespace Hotel_Course.Models
     public class InstantRequest : Request
     {
         public Number Number { get; set; }
+        public int discountApplied { get; set; } = 0;
 
         public InstantRequest(string Id, string Holder, Number number, DateTime dateFrom, DateTime dateTo) 
         {
